@@ -26,3 +26,11 @@
     creates: /usr/bin/yay
   tags:
     - yay
+
+- name: Install packages from AUR
+  become: true
+  yay:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ aur_packages }}"
+  when: aur_packages

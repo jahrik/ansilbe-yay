@@ -5,30 +5,4 @@
 - include_tasks: uninstall.yml
   when: install | default('true') == false
 
-- name: Install dependencies
-  become: true
-  package:
-    name: "{{ item }}"
-    state: present
-  with_items:
-    - base-devel
-    - git
 
-- name: clone yay from github
-  become: false
-  git:
-    repo: https://aur.archlinux.org/yay.git
-    dest: /tmp/yay
-    version: master
-    update: yes
-  tags:
-    - yay
-
-- name: makepkg --noconfirm -si
-  command: makepkg --noconfirm -si
-  become: false
-  args:
-    chdir: /tmp/yay
-    creates: /usr/bin/yay
-  tags:
-    - yay

@@ -15,6 +15,11 @@ Set to install or uninstall and cleanup
 
     install: true/false
 
+This can be set to install any additional software form the AUR after yay is installed and ready to use.
+
+    aur_packages:
+      - polybar-git
+
 ## Dependencies
 
 None

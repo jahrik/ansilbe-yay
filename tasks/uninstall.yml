@@ -3,6 +3,7 @@
   become: true
   package:
     name: yay
+    state: absent
 
 - name: Cleanup /tmp/yay
   file:
