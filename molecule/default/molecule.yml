@@ -8,7 +8,7 @@ driver:
 platforms:
   - name: arch
     image: jahrik/docker-archlinux-ansible
-    # pre_build_image: true
+    pre_build_image: true
 provisioner:
   name: ansible
   inventory:
