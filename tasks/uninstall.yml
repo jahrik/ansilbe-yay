@@ -1,0 +1,10 @@
+---
+- name: Uninstall yay
+  become: true
+  package:
+    name: yay
+
+- name: Cleanup /tmp/yay
+  file:
+    path: /tmp/yay
+    state: absent
