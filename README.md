@@ -1,5 +1,7 @@
 # Yay
 
+[![CICD](https://github.com/jahrik/ansilbe-yay/actions/workflows/cicd.yml/badge.svg)](https://github.com/jahrik/ansilbe-yay/actions/workflows/cicd.yml)
+
 Installs [yay](https://github.com/Jguer/yay)
 
 ## Requirements
