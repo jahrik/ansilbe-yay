@@ -4,5 +4,3 @@
 
 - include_tasks: uninstall.yml
   when: install | default('true') == false
-
-
